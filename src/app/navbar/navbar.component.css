@@ -1,0 +1,41 @@
+.logo {
+  height: 47px;
+  width: 126px !important;
+}
+.navbar-toggler{
+  margin-bottom: 10px;
+}
+.logo img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+.fsearch input {
+  width: 356px;
+}
+.sign,
+.search {
+  background-color: #f68b1e;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.search {
+  width: 150px;
+}
+.dropdown-toggle:hover ,.cart:hover{
+  color: #f68b1e;
+}
+.navbar li a{
+  font-size: 17px;
+  color: black;
+}
+.div1{
+  position: relative;
+}
+.iconSearch{
+position: absolute;
+right: 16px;
+    top: 12px;
+}
