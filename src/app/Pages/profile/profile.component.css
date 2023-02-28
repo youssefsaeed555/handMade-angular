@@ -1,0 +1,104 @@
+.profile-img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  /* gap: 1rem; */
+}
+
+.left-column {
+  width: 14rem;
+}
+
+.right-column {
+  width: 40rem;
+}
+
+h6 {
+  width: 75%;
+}
+
+.resetPassword {
+  width: 40%;
+}
+
+span {
+  font-weight: bold;
+}
+
+.edit {
+  /* background-color: #119aa2; */
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  /* color: white; */
+}
+div.edit i:hover {
+  /* color: #119aa2; */
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    max-width: 95%;
+  }
+  .left-column {
+    width: 30%;
+    /* margin-right: 5rem; */
+  }
+  .right-column {
+    width: 70%;
+  }
+  h6 {
+    /* max-width: 100%; */
+    width: 80%;
+  }
+  .resetPassword {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  /* .container{
+        margin:1rem;
+        max-width: 95%;
+    } */
+  .left-column {
+    width: 30%;
+    /* margin-right: 5rem; */
+  }
+  .right-column {
+    width: 70%;
+  }
+  h6 {
+    /* max-width: 100%; */
+    width: 90%;
+  }
+  .resetPassword {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .container {
+    display: block;
+    padding: 0px 10%;
+  }
+  .left-column {
+    width: 70%;
+    /* margin: auto; */
+  }
+  .right-column {
+    width: 100%;
+  }
+  h6 {
+    /* max-width: 100%; */
+    width: 100%;
+  }
+  .resetPassword {
+    width: 90%;
+  }
+}

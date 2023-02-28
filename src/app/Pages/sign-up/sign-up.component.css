@@ -1,0 +1,65 @@
+.logo {
+  margin-left: 40%;
+}
+
+img.image {
+  padding: 10px;
+  height: 100vh;
+  border-radius: 30px;
+}
+
+form {
+  margin: auto;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+input[type="radio"]#male:checked ~ .male {
+  color: black;
+}
+
+input[type="radio"]#female:checked ~ .female {
+  color: black;
+}
+
+.profile-img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+label {
+  color: gray;
+}
+
+input:focus {
+  border: none;
+}
+
+@media only screen and (max-width: 909px) {
+  img.image {
+    display: none;
+  }
+  form {
+    margin-top: 100px;
+    /* box-shadow: 2px 2px 4px grey; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 40px 0.5rem;
+    border-radius: 25px;
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 504px) {
+  form {
+    padding-top: 50px;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 336px) {
+  form {
+    padding-top: 30px;
+  }
+}

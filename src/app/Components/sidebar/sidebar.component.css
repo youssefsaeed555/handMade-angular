@@ -1,0 +1,23 @@
+.sidebar{
+  width: 100%;
+}
+ul li{
+list-style: none;
+margin-bottom: 5px;
+}
+ul li a{
+text-decoration: none;
+font-size: 20px;
+}
+ul li a:hover{
+  color:#f68b1e ;
+}
+ul li a img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.container .row div{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

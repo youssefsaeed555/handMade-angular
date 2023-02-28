@@ -1,0 +1,162 @@
+<app-navbar></app-navbar>
+<div class="bg-light p-5">
+  <div
+    class="container bg bg-white mt-5 list-group-flush rounded gap-3"
+    *ngIf="prodData"
+  >
+    <div class="py-5 product list-group-item col-lg-4 text-center">
+      <img
+        class="product-img m-auto rounded"
+        src="{{ prodData.imageCover }}"
+        alt=""
+      />
+    </div>
+
+    <div class="right-column product list-group-item col-lg-6 mx-4">
+      <div class="product-description py-1">
+        <span
+          class="text-capitalize"
+          style="font-family: 'Montserrat', sans-serif"
+          >{{ prodData.category.name }}</span
+        >
+        <div class="d-flex justify-content-between">
+          <h1 style="font-family: 'Fraunces', serif">{{ prodData.title }}</h1>
+          <div class="favorite rounded-circle">
+            <i
+              class="fa-regular fa-heart"
+              *ngIf="!isStarred"
+              id="star-result"
+              (click)="star()"
+            ></i>
+            <i
+              class="fa-solid fa-heart"
+              *ngIf="isStarred"
+              id="star-result"
+              (click)="unstar()"
+            ></i>
+          </div>
+        </div>
+
+        <p class="text-secondary" style="font-family: 'Montserrat', sans-serif">
+          {{ prodData.description }}
+        </p>
+        <div class="d-flex">
+          <p>
+            <i class="fa-solid fa-star" style="color: #d37c85"></i
+            ><i class="fa-solid fa-star" style="color: #d37c85"></i
+            ><i class="fa-solid fa-star" style="color: #d37c85"></i
+            ><i class="fa-regular fa-star" style="color: #d37c85"></i
+            ><i class="fa-regular fa-star" style="color: #d37c85"></i>
+          </p>
+          <p style="font-family: 'Fraunces', serif" class="px-3">
+            2,115 ratings
+          </p>
+        </div>
+      </div>
+
+      <div class="product-price d-flex ms-auto my-2">
+        <span class="font-family: 'Fraunces', serif;"
+          >EGP {{ prodData.price }}
+        </span>
+      </div>
+
+      <div class="d-flex ms-auto">
+        <input type="number" min="1" value="1" class="rounded col-sm-2 px-2" />
+        <input
+          type="submit"
+          value="Add to cart"
+          class="text-capitalize w-50 p-2 border-0 rounded mx-4"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- <div
+    class="container bg bg-white rounded d-block p-4 my-4"
+  >
+    <h4
+      class="text-secondary text-capitalize py-2"
+      style="font-family: 'Fraunces', serif"
+    >
+      Customer reviews
+    </h4>
+    <hr class="text-muted" />
+    <ul class="list-group-flush">
+      <li class="list-group-item">
+        <div class="d-flex">
+          <img
+            class="comment-img rounded-circle"
+            src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <div class="px-3">
+            <div class="d-flex">
+              <h5
+                class="text-capitalize"
+                style="font-family: 'Fraunces', serif"
+              >
+                salma elsayed
+              </h5>
+              <h6
+                class="text-secondary px-2"
+                style="font-family: 'Montserrat', sans-serif"
+              >
+                11 NOV, 2022
+              </h6>
+            </div>
+
+            <p>
+              <i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-regular fa-star" style="color: #d37c85"></i
+              ><i class="fa-regular fa-star" style="color: #d37c85"></i>
+            </p>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit am elit. Sequi eius aspernatur non tionem optio
+          reprehenderit impedit ex error, tempora atque? In quidem nihil
+          dignissimos fuga, libero obcaecati!
+        </p>
+      </li>
+      <hr class="text-muted" />
+      <li class="list-group-item">
+        <div class="d-flex">
+          <img
+            class="comment-img rounded-circle"
+            src="https://images.pexels.com/photos/1374510/pexels-photo-1374510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <div class="px-3">
+            <div class="d-flex">
+              <h5
+                class="text-capitalize"
+                style="font-family: 'Fraunces', serif"
+              >
+                amr mohammed
+              </h5>
+              <h6
+                class="text-secondary px-2"
+                style="font-family: 'Montserrat', sans-serif"
+              >
+                11 NOV, 2022
+              </h6>
+            </div>
+
+            <p>
+              <i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-solid fa-star" style="color: #d37c85"></i
+              ><i class="fa-regular fa-star" style="color: #d37c85"></i
+              ><i class="fa-regular fa-star" style="color: #d37c85"></i>
+            </p>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet adipisicing elit. Sequi eius non
+          voluptatibus reprehenderit impedit ex error, tempora atque? In quidem
+          nihil fuga, obcaecati!
+        </p>
+      </li>
+    </ul>
+  </div> -->
+</div>

@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<app-slider class="col-lg-6 background"></app-slider>
+<!-- <div class="background">
+  <h1 class="text-center pt-5">
+    Find things you'll love
+  </h1>
+  <h2 class="text-center">
+    Support independent sellers
+  </h2>
+</div> -->
+<div class="categorySection">
+  <div class="container py-4">
+    <h3
+      class="font-weight-bold text-capitalize text-center"
+      style="font-family: 'Fraunces', serif"
+    >
+      categories
+    </h3>
+    <ul class="list-group-flush row pb-5">
+      <li
+        class="category list-group-item col-sm mx-auto"
+        routerLink="/category/{{ c._id }}/products"
+        *ngFor="let c of categDetails"
+      >
+        <img class="category-img mb-3" src="{{ c.image }}" />
+        <h6
+          class="text-capitalize text-center"
+          style="font-family: 'Fraunces', serif"
+        >
+          {{ c.name }}
+        </h6>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <h3
+    class="font-weight-bold text-capitalize"
+    style="font-family: 'Fraunces', serif"
+  >
+    Popular gifts right now
+  </h3>
+  <ul class="list-group-flush row py-4 products ml-5" *ngIf="prodDetails">
+    <li
+      class="product_card list-group-item col-lg rounded"
+      *ngFor="let p of prodDetails.slice(0, 6)"
+    >
+      <img
+        class="product_card-img rounded"
+        src="{{ p.imageCover }}"
+        routerLink="/product/{{ p._id }}"
+      />
+      <div class="details">
+        <h6 class="text-capitalize" style="font-family: 'Fraunces', serif">
+          {{ p.title }}
+        </h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star-half-stroke"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <div class="d-flex justify-content-between">
+          <h6 style="font-family: 'Fraunces', serif">USD {{ p.price }}$</h6>
+          <div class="favorite p-2 rounded-circle">
+            <i
+              class="fa-regular fa-heart"
+              *ngIf="!isStarred"
+              id="star-result"
+              (click)="star()"
+            ></i>
+            <i
+              class="fa-solid fa-heart"
+              *ngIf="isStarred"
+              id="star-result"
+              (click)="unstar()"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<footer class="footer py-4">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-lg-4 text-lg-start">
+        Copyright &copy; Your Website 2023
+      </div>
+      <div class="col-lg-4 my-3 my-lg-0">
+        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="link-dark text-decoration-none me-3" href="#!"
+          >Privacy Policy</a
+        >
+        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,119 @@
+/* .background{
+  
+} */
+.categorySection {
+  /* background-color:; */
+  /* content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+  /* background: linear-gradient(180deg, rgba(255, 254, 254, 0), #00888d0e); */
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0), ); */
+  background-image: linear-gradient(#00888d1b 50%, rgb(255, 255, 255) 50%);
+  /* height: 50%;
+  background-color: pink; */
+}
+
+.category {
+  width: 10rem;
+  text-align: center;
+}
+.category-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.category-img:hover {
+  transform: scale(1.05);
+  /* box-shadow: 2px 2px 4px grey; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h1,
+h2 {
+  color: white;
+  font-weight: bold;
+  font-family: initial;
+  /* animation-name: textAnimation;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+}
+h6,
+h3,
+h5 {
+  font-weight: 600;
+}
+i {
+  color: #00898d;
+}
+a i {
+  color: white;
+}
+
+.products {
+  gap: 1rem;
+}
+
+.product_card {
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  /* border-radius: 20px; */
+  width: 16rem;
+  max-width: 16rem;
+  height: auto;
+  /* margin: 0.3rem; */
+}
+
+.product_card-img {
+  cursor: pointer;
+  /* border-radius: 20px; */
+  width: 15rem;
+  height: 15rem;
+  transition-duration: 0.25s;
+}
+
+.product_card-img:hover {
+  transform: scale(1.05);
+}
+
+.details {
+  padding-top: 1rem;
+  line-height: 80%;
+  height: 8.5rem;
+}
+
+.product_card:hover {
+  /* box-shadow: 2px 2px 4px grey; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.favorite {
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (max-width: 567px) {
+  .products {
+    gap: 0.5rem;
+    margin: auto;
+  }
+  .product_card {
+    width: 10rem;
+    margin-bottom: 0.75rem;
+  }
+  .product_card-img {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/* @media only screen and (max-width: 996px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */

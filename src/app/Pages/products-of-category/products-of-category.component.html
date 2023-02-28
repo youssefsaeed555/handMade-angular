@@ -1,0 +1,195 @@
+<app-navbar></app-navbar>
+<div class="container py-5">
+  <app-sidebar class="pt-5 col-2 sidebar"></app-sidebar>
+  <div>
+    <h2
+      class="pt-5 mx-5 pb-2 font-weight-bold text-capitalize"
+      style="font-family: 'Fraunces', serif"
+    >
+      {{ currentCategory }}
+    </h2>
+    <ul class="list-group-flush row ml-5 mx-4 cols-7 products">
+      <li
+        class="product_card list-group-item col-lg rounded"
+        *ngFor="let p of prodsDetails"
+      >
+        <!-- <ng-container *ngTemplateOutlet="p.category = ">
+
+      </ng-container> -->
+        <img
+          class="product_card-img rounded"
+          routerLink="/product/{{ p._id }}"
+          src="{{ p.imageCover }}"
+        />
+        <div class="details">
+          <h6 class="" style="font-family: 'Fraunces', serif">{{ p.title }}</h6>
+          <p>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i
+            ><i class="fa-regular fa-star"></i>
+          </p>
+          <div class="d-flex justify-content-between">
+            <h6 style="font-family: 'Fraunces', serif">EGP {{ p.price }}$</h6>
+            <div class="favorite p-2 rounded-circle">
+              <i
+                class="fa-regular fa-heart"
+                *ngIf="!isStarred"
+                id="star-result"
+                (click)="star()"
+              ></i>
+              <i
+                class="fa-solid fa-heart"
+                *ngIf="isStarred"
+                id="star-result"
+                (click)="unstar()"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- <li class="product_card list-group-item col">
+      <img
+        class="product_card-img"
+        src="https://images.pexels.com/photos/4792075/pexels-photo-4792075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col">
+      <img
+        class="product_card-img"
+        src="https://cdn.shopify.com/s/files/1/0555/1177/7357/products/il_fullxfull.3318462795_27gg.jpg?v=1665263650"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col">
+      <img
+        class="product_card-img"
+        src="https://i.pinimg.com/564x/58/50/45/58504521ba6d966dbe8b9e90ce9ffa4b.jpg"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col">
+      <img
+        class="product_card-img"
+        src="https://i.pinimg.com/564x/4b/77/6c/4b776c1162ea33862b786a209d77e2ad.jpg"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+    <li class="product_card list-group-item col" routerLink="/product/:id">
+      <img
+        class="product_card-img"
+        src="https://i.pinimg.com/564x/cf/45/db/cf45db1ce307c6375321af2ad04cf184.jpg"
+      />
+      <div class="details">
+        <h6 class="">Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col">
+      <img
+        class="product_card-img"
+        src="https://images.pexels.com/photos/4792075/pexels-photo-4792075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col-lg">
+      <img
+        class="product_card-img"
+        src="https://cdn.shopify.com/s/files/1/0555/1177/7357/products/il_fullxfull.3318462795_27gg.jpg?v=1665263650"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col-lg">
+      <img
+        class="product_card-img"
+        src="https://i.pinimg.com/564x/58/50/45/58504521ba6d966dbe8b9e90ce9ffa4b.jpg"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i
+          ><i class="fa-regular fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li>
+
+    <li class="product_card list-group-item col-lg">
+      <img
+        class="product_card-img"
+        src="https://i.pinimg.com/564x/4b/77/6c/4b776c1162ea33862b786a209d77e2ad.jpg"
+      />
+      <div class="details">
+        <h6>Product Name</h6>
+        <p>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+          ><i class="fa-solid fa-star"></i>
+        </p>
+        <h6>USD 22.00$</h6>
+      </div>
+    </li> -->
+    </ul>
+  </div>
+</div>

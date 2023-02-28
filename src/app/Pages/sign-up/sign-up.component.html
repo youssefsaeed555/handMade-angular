@@ -1,0 +1,124 @@
+<div class="d-flex justify-content-between">
+  <form class="col-lg-3 form" [formGroup]="validationForm" (submit)="signUp()">
+    <a class="px-1 py-5 logo" routerLink="/home"
+      ><img class="col-2 mb-3" src="../../../assets/image/logo1.png"
+    /></a>
+    <h3 class="p-1" style="font-family: 'Fraunces', serif">
+      Create An Account
+    </h3>
+    <div class="p-1 form-group">
+      <input
+        type="text"
+        class="form-control"
+        [ngClass]="validNameClass()"
+        placeHolder="User Name"
+        name="userName"
+        formControlName="userName"
+        required
+      />
+      <p
+        *ngIf="!validName && validationForm.controls['userName'].value"
+        class="text-danger"
+      >
+        *Please, enter your name
+      </p>
+    </div>
+
+    <div class="d-flex p-1 form-group">
+      <div>
+        <label>Gender: </label>
+      </div>
+
+      <div class="px-4">
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          formControlName="gender"
+        />
+        <label class="px-2 male">Male</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          formControlName="gender"
+        />
+        <label class="px-2 female">Female</label>
+      </div>
+    </div>
+
+    <div class="p-1 form-group">
+      <input
+        type="email"
+        class="form-control"
+        [ngClass]="validEmailClass()"
+        placeHolder="Email"
+        name="email"
+        formControlName="email"
+        required
+      />
+      <p
+        *ngIf="!validEmail && validationForm.controls['email'].value"
+        class="text-danger"
+      >
+        *Please, enter your email
+      </p>
+    </div>
+
+    <div class="p-1 form-group">
+      <input
+        type="text"
+        class="form-control"
+        [ngClass]="validPhoneClass()"
+        placeHolder="Phone"
+        name="phone"
+        formControlName="phone"
+        required
+      />
+      <p
+        *ngIf="!validPhone && validationForm.controls['phone'].value"
+        class="text-danger"
+      >
+        *Please, enter your phone
+      </p>
+    </div>
+
+    <div class="p-1 form-group">
+      <input
+        type="password"
+        class="form-control"
+        [ngClass]="validPasswordClass()"
+        placeHolder="Password"
+        name="password"
+        formControlName="password"
+        required
+      />
+    </div>
+
+    <div class="p-1 form-group">
+      <input
+        type="password"
+        class="form-control"
+        [ngClass]="validPasswordClass()"
+        placeHolder="Confirm Password"
+        name="confirmPassword"
+        formControlName="confirmPassword"
+        required
+      />
+    </div>
+    <div class="p-1 form-group">
+      <input
+        type="submit"
+        value="Sign up"
+        class="text-capitalize w-100 p-2 border-0 rounded"
+      />
+    </div>
+  </form>
+
+  <img src="../../../assets/image/needles.jpg" class="col-6 image" />
+</div>

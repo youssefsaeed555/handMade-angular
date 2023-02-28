@@ -1,0 +1,252 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Handmade Hoop",
+      "img": "https://i.pinimg.com/564x/cf/45/db/cf45db1ce307c6375321af2ad04cf184.jpg",
+      "price": "15.00",
+      "rate": 4,
+      "description": "eius laudantium aliquam officiis vel ipsam dolorum neque illo, quae vero hic atque praesentium",
+      "category": "embroidery"
+    },
+    {
+      "id": 2,
+      "name": "Crochet",
+      "img": "https://i.pinimg.com/564x/2d/6c/ac/2d6cacf58cc622d042dff936de19716d.jpg",
+      "price": "17.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "knitting"
+    },
+    {
+      "id": 3,
+      "name": "Coasters",
+      "img": "https://cdn.shopify.com/s/files/1/0555/1177/7357/products/il_fullxfull.3318462795_27gg.jpg?v=1665263650",
+      "price": "22.50",
+      "rate": 2,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium",
+      "category": "resin"
+    },
+    {
+      "id": 4,
+      "name": "Resin Tray",
+      "img": "https://i.pinimg.com/564x/4b/77/6c/4b776c1162ea33862b786a209d77e2ad.jpg",
+      "price": "27.00",
+      "rate": 4.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "resin"
+    },
+    {
+      "id": 5,
+      "name": "Handmade Necklace",
+      "img": "https://i.pinimg.com/564x/58/50/45/58504521ba6d966dbe8b9e90ce9ffa4b.jpg",
+      "price": "32.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "accessories"
+    },
+    {
+      "id": 6,
+      "name": "Handmade Necklace",
+      "img": "https://i.pinimg.com/564x/72/f1/c0/72f1c017cafc34a7d92029a759b5ecd4.jpg",
+      "price": "15.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "accessories"
+    },
+    {
+      "id": 7,
+      "name": "Handmade Necklace",
+      "img": "https://i.pinimg.com/564x/72/f1/c0/72f1c017cafc34a7d92029a759b5ecd4.jpg",
+      "price": "15.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "accessories"
+    },
+    {
+      "id": 8,
+      "name": "Handmade Necklace",
+      "img": "https://i.pinimg.com/564x/72/f1/c0/72f1c017cafc34a7d92029a759b5ecd4.jpg",
+      "price": "15.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "accessories"
+    },
+    {
+      "id": 9,
+      "name": "Handmade Necklace",
+      "img": "https://i.pinimg.com/564x/72/f1/c0/72f1c017cafc34a7d92029a759b5ecd4.jpg",
+      "price": "15.00",
+      "rate": 3.5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,dolore perspiciatis eius laudantium aliquam officiis vel ipsam dolorumneque illo, quae vero hic atque praesentium!",
+      "category": "accessories"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "resin",
+      "img": "https://i.pinimg.com/564x/4b/77/6c/4b776c1162ea33862b786a209d77e2ad.jpg"
+    },
+    {
+      "id": 2,
+      "name": "accessories",
+      "img": "https://i.pinimg.com/564x/58/50/45/58504521ba6d966dbe8b9e90ce9ffa4b.jpg"
+    },
+    {
+      "id": 3,
+      "name": "embroidery",
+      "img": "https://i.pinimg.com/564x/cf/45/db/cf45db1ce307c6375321af2ad04cf184.jpg"
+    },
+    {
+      "id": 4,
+      "name": "knitting",
+      "img": "https://i.pinimg.com/564x/95/aa/7a/95aa7a70573939b9f20a98c6d13967dd.jpg"
+    }
+  ],
+  "users": [
+    {
+      "name": "salma elsayed Mohamed",
+      "phone": "01200130883",
+      "email": "salmaelsayed80@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "amal ramy ",
+      "phone": "01200139983",
+      "email": "amalramy@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Amr Mohamed",
+      "phone": "01200133852",
+      "email": "AmrMohamed@gmail.com",
+      "img": "https://images.pexels.com/photos/1374510/pexels-photo-1374510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "password": "12345678",
+      "gender": "male",
+      "rule": "Buyer",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Ahmed Ali",
+      "img": "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "email": "ahmedali809@gmail.com",
+      "phone": "01200155883",
+      "gender": "male",
+      "rule": "Buyer",
+      "password": "12345678"
+    },
+    {
+      "fullName": "rahma hanafi",
+      "gender": "female",
+      "email": "rahma@gmail.com",
+      "phone": "01200130883",
+      "password": "111111111111111",
+      "confirmPassword": "111111111111111",
+      "id": 5
+    },
+    {
+      "name": "Amr Ahmed",
+      "gender": "male",
+      "email": "amrahmed@gmail.com",
+      "phone": "01200130883",
+      "password": "147896325",
+      "id": 6
+    },
+    {
+      "name": "Mohamed Elsayed",
+      "gender": "male",
+      "email": "mohamed@gmail.com",
+      "phone": "01201308830",
+      "password": "147852369",
+      "id": 7
+    },
+    {
+      "name": "wwwww",
+      "gender": "male",
+      "email": "www@gmail.com",
+      "phone": "01239855555",
+      "password": "11111111111111",
+      "id": 8
+    },
+    {
+      "name": "rahma hanafi",
+      "gender": "female",
+      "email": "rahma33@gmail.com",
+      "phone": "01239855555",
+      "password": "qwertyui",
+      "id": 9
+    },
+    {
+      "name": "Ahmed Mostafaa Ali",
+      "phone": "01239855555",
+      "email": "ahmed@gmail.com",
+      "img": "",
+      "id": 10
+    },
+    {
+      "name": "rodyna elboghdady",
+      "gender": "female",
+      "email": "rodyna@gmail.com",
+      "phone": "01239855555",
+      "password": "789456123",
+      "img": "",
+      "id": 11
+    },
+    {
+      "name": "rodyna elboghdady",
+      "gender": "female",
+      "email": "rodyna@gmail.com",
+      "phone": "01239855555",
+      "password": "789456123",
+      "img": "",
+      "id": 12
+    },
+    {
+      "name": "rodyna elboghdady",
+      "gender": "female",
+      "email": "rodyna@gmail.com",
+      "phone": "01239855555",
+      "password": "789456123",
+      "img": "",
+      "id": 13
+    },
+    {
+      "name": "ahmed ali",
+      "gender": "male",
+      "email": "ahmed@gmail.com",
+      "phone": "01236589741",
+      "password": "789456123",
+      "img": "",
+      "id": 14
+    },
+    {
+      "name": "Mohmaed",
+      "gender": "male",
+      "email": "mohamed@gmail.com",
+      "phone": "01236547896",
+      "password": "147852369",
+      "img": "",
+      "id": 15
+    },
+    {
+      "name": "Ayman",
+      "gender": "male",
+      "email": "ayman@gmail.com",
+      "phone": "01025875663",
+      "password": "qazwsxedc",
+      "img": "",
+      "id": 16
+    },
+    {
+      "name": "Mostafa",
+      "gender": "male",
+      "email": "mostaf@gmail.com",
+      "phone": "01178965412",
+      "password": "14789632",
+      "img": "",
+      "id": 17
+    }
+  ]
+}
