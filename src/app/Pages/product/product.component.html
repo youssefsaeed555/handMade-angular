@@ -49,7 +49,7 @@
             ><i class="fa-regular fa-star" style="color: #d37c85"></i>
           </p>
           <p style="font-family: 'Fraunces', serif" class="px-3">
-            2,115 ratings
+            {{ prodData.ratingQuantity }} ratings
           </p>
         </div>
       </div>
@@ -71,8 +71,9 @@
     </div>
   </div>
 
-  <!-- <div
+  <div
     class="container bg bg-white rounded d-block p-4 my-4"
+    *ngIf="reviewsListLength"
   >
     <h4
       class="text-secondary text-capitalize py-2"
@@ -158,5 +159,5 @@
         </p>
       </li>
     </ul>
-  </div> -->
+  </div>
 </div>

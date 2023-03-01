@@ -1,0 +1,9 @@
+.error {
+  width: 30rem;
+}
+
+@media only screen and (max-width: 620px) {
+  .error {
+    width: 22rem;
+  }
+}

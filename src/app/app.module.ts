@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
@@ -16,6 +16,8 @@ import { ProfileComponent } from './Pages/profile/profile.component';
 import { ProductsOfCategoryComponent } from './Pages/products-of-category/products-of-category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNoAnimationModule } from 'ngx-toastr';
+import { TokenInterceptorService } from './interceptors/token-interceptor.service';
+import { ErrorComponent } from './Components/error/error.component';
 
 var Routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,8 +25,9 @@ var Routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'users/:id', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'category/:id/products', component: ProductsOfCategoryComponent },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
@@ -40,6 +43,7 @@ var Routes: Routes = [
     ProductComponent,
     ProfileComponent,
     ProductsOfCategoryComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,13 @@ var Routes: Routes = [
       },
     }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -20,6 +20,9 @@ export class ProductComponent implements OnInit {
   ID: any;
   product: any;
   prodData!: any;
+  reviews: any;
+  reviewsData: any;
+  reviewsListLength: any;
   constructor(myActivated: ActivatedRoute, public myService: ServiceService) {
     this.ID = myActivated.snapshot.params['id'];
     console.log(this.ID);
@@ -36,6 +39,18 @@ export class ProductComponent implements OnInit {
         console.log(err);
       },
     });
+
+    this.myService.getListOfReviewsForProduct(this.ID).subscribe({
+      next: (res) => {
+        this.reviews = res;
+        this.reviewsData = this.reviews.data;
+        this.reviewsListLength = this.reviewsData.length;
+        console.log(this.reviews, this.reviewsData);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
     // throw new Error('Method not implemented.');
   }
 
@@ -44,20 +59,20 @@ export class ProductComponent implements OnInit {
   // }
 }
 
-export class ProdData {
-  _id: any;
-  title: any;
-  slug: any;
-  description: any;
-  quantity: any;
-  sold: any;
-  price: any;
-  colors: any;
-  imageCover: any;
-  images: any;
-  category: any;
-  ratingQuantity: any;
-  createdAt: any;
-  updatedAt: any;
-  reviews: any;
-}
+// export class ProdData {
+//   _id: any;
+//   title: any;
+//   slug: any;
+//   description: any;
+//   quantity: any;
+//   sold: any;
+//   price: any;
+//   colors: any;
+//   imageCover: any;
+//   images: any;
+//   category: any;
+//   ratingQuantity: any;
+//   createdAt: any;
+//   updatedAt: any;
+//   reviews: any;
+// }

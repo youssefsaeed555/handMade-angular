@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -35,11 +35,53 @@ export class ServiceService {
     return this.myClient.post(`${this.baseURL}/api/v1/auth/login`, user);
   }
 
-  getCurrentUser(id: any) {
-    return this.myClient.get(`${this.baseURL}/users/${id}`);
+  getCurrentUser(token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.get(`${this.baseURL}/api/v1/user/getMe`, {
+      headers,
+    });
   }
 
-  UpdateUserData(id: any, updateUser: any) {
-    return this.myClient.put(`${this.baseURL}/users/${id}`, updateUser);
+  putProfileImg(token: any, newImg: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.put(
+      `${this.baseURL}/api/v1/user/updatePhoto`,
+      newImg,
+      {
+        headers,
+      }
+    );
+  }
+
+  putUserData(token: any, updateUser: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.put(
+      `${this.baseURL}/api/v1/user/updateMe`,
+      updateUser,
+      {
+        headers,
+      }
+    );
+  }
+
+  getListOfReviewsForProduct(prodId: any) {
+    return this.myClient.get(
+      `${this.baseURL}/api/v1/products/${prodId}/reviews`
+    );
   }
 }

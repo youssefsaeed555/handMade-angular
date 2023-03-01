@@ -1,8 +1,14 @@
 <app-navbar></app-navbar>
-<div class="container bg bg-white my-5 list-group-flush rounded" *ngIf="user">
+<div
+  class="container bg bg-white my-5 list-group-flush rounded"
+  *ngIf="userData"
+>
   <div class="left-column mx-5 my-5">
-    <div *ngIf="user.img; else trueBlock">
-      <img class="col-2 rounded-circle profile-img" src="{{ user.img }}" />
+    <div *ngIf="userData.profileImg; else trueBlock">
+      <img
+        class="col-2 rounded-circle profile-img"
+        src="{{ userData.profileImg }}"
+      />
     </div>
     <ng-template #trueBlock>
       <div class="bg-light col-2 rounded-circle profile-img">
@@ -44,15 +50,15 @@
         style="font-family: 'Montserrat', sans-serif"
         *ngIf="!isEdit; else isEditBlock"
       >
-        {{ user.name }}
+        {{ userData.userName }}
       </h6>
       <ng-template #isEditBlock>
         <input
           type="text"
-          name="name"
-          value="{{ user.name }}"
-          class="d-block my-2 p-2 border-bottom border-0"
-          [(ngModel)]="name"
+          name="userName"
+          value="{{ userData.userName }}"
+          class="d-block py-2 border-bottom border-0"
+          [(ngModel)]="userName"
         />
       </ng-template>
     </div>
@@ -66,39 +72,41 @@
       <h6
         class="text-capitalize p-1 border border-secondary rounded mt-1"
         style="font-family: 'Montserrat', sans-serif"
-        *ngIf="!isEdit; else isEditBlock1"
       >
-        {{ user.email }}
+        {{ userData.email }}
       </h6>
-      <ng-template #isEditBlock1>
+
+      <!--
+        *ngIf="!isEdit; else isEditBlock1"
+         <ng-template #isEditBlock1>
         <input
           type="email"
           name="email"
-          value="{{ user.email }}"
+          value="{{ userData.email }}"
           class="d-block my-2 p-2 border-bottom border-0"
           [(ngModel)]="email"
         />
-      </ng-template>
+      </ng-template> -->
       <div class="d-flex justify-content-between">
         <h6
           class="text-capitalize p-1 border border-secondary rounded"
           style="font-family: 'Montserrat', sans-serif"
           *ngIf="!isEdit; else isEditBlock2"
         >
-          {{ user.phone }}
+          {{ userData.phone }}
         </h6>
 
         <ng-template #isEditBlock2>
           <input
             type="text"
             name="phone"
-            value="{{ user.phone }}"
-            class="d-block my-2 p-2 border-bottom border-0"
+            value="{{ userData.phone }}"
+            class="d-block py-2 border-bottom border-0"
             [(ngModel)]="phone"
           />
         </ng-template>
         <div
-          class="btn btn-sm text-capitalize"
+          class="btn btn-sm btn-outline-success text-capitalize"
           *ngIf="isEdit"
           (click)="update()"
         >
