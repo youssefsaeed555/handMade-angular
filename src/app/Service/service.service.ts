@@ -36,6 +36,13 @@ export class ServiceService {
     return this.myClient.post(`${this.baseURL}/api/v1/auth/login`, user);
   }
 
+  forgetpass(user:any){
+    return this.myClient.post(`${this.baseURL}/api/v1/auth/forgetPassword`,user);
+  }
+  checkCode(code:any){
+    return this.myClient.post(`${this.baseURL}/api/v1/auth/verifyCode`,code)
+  }
+
   getCurrentUser(token: any) {
     let headers: HttpHeaders = new HttpHeaders();
     headers.append(
@@ -86,14 +93,25 @@ export class ServiceService {
     );
   }
   /*-----------------------------*/
-  getProductCart() {
-    return this.myClient.get(`${this.baseURL}/cartProduct`);
+  getProductCart(token:any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization',token);
+    return this.myClient.get(`${this.baseURL}/api/v1/cart/`, { headers });
   }
-  deletefromcart(id: any) {
-    return this.myClient.delete(`${this.baseURL}/cartProduct/${id}`);
+  getProductWish(token:any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization',token);
+    return this.myClient.get(`${this.baseURL}/api/v1/wishlist/`,{ headers });
   }
   addToCart(token:any,productId: any) {
-
     let headers: HttpHeaders = new HttpHeaders();
     headers.append(
       'Content-Type',
@@ -102,10 +120,34 @@ export class ServiceService {
     headers.append('Authorization',token);
     return this.myClient.post(`${this.baseURL}/api/v1/cart/`, productId, { headers });
   }
-  getProductWish() {
-    return this.myClient.get(`${this.baseURL}/productWish`);
+  addtowish(token:any,productId: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization',token);
+    return this.myClient.post(`${this.baseURL}/api/v1/wishlist/`, productId, { headers });
   }
-  deletefromwish(id: any) {
-    return this.myClient.delete(`${this.baseURL}/productWish/${id}`);
+
+
+  deleteFromWish(id: any, token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.delete(`${this.baseURL}/api/v1/wishlist/${id}`);
+  }
+
+  deleteFromCart(id: any, token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.delete(`${this.baseURL}/api/v1/cart/${id}`);
   }
 }

@@ -1,15 +1,29 @@
 
 <div class="d-flex justify-content-between">
 
-  <form class="col-lg-3">
+  <form class="col-lg-3" [formGroup]="validationForm" (submit)="signIn()">
     <a class="p-1 py-3 logo"  routerLink="/home"><img class="col-2" src="../../../assets/image/logo1.png"></a>
     <h3 class="py-2 px-1" style="font-family: 'Fraunces', serif;"><h3>Reset Your Password</h3></h3>
     <p class="py-2 px-1" style="font-family: 'Fraunces', serif;">Enter your proton account email address</p>
     <div class="p-1">
-      <input type="email" class="form-control" placeHolder="Email" required />
+      <input
+        type="email"
+        class="form-control"
+        [ngClass]="validEmailClass()"
+        placeHolder="Email"
+        name="email"
+        formControlName="email"
+        required
+      />
     </div>
 
-    <button class="mt-2 w-100 p-2 border-0 rounded"><a  routerLink="/codetoreset" class="text-decoration-none ">next</a></button>
+    <div class="py-3 px-1">
+      <input
+        type="submit"
+        value="Next"
+        class="text-capitalize w-100 p-2 border-0 rounded"
+      />
+    </div>
 
   </form>
 

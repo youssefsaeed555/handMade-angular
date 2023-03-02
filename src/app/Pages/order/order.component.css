@@ -8,7 +8,7 @@ parent{
 }
 .total {
   border: 1px solid #00898d;
-  height: 280px;
+  height: 318px;
   text-align: center;
 }
 .total img {
@@ -24,7 +24,7 @@ parent{
 }
 .proccese {
   display: flex;
-  margin-left: 35px;
+  margin-left: 60px;
 }
 
 .buy,
@@ -83,7 +83,7 @@ parent{
 }
   .buy,
   .remove {
-    margin-left: 10px;
+    margin-left: 37px;
   }
   .description {
     margin-bottom: 0;

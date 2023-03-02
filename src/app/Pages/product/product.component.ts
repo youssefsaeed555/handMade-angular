@@ -11,25 +11,7 @@ import { ServiceService } from 'src/app/Service/service.service';
 export class ProductComponent implements OnInit {
   isStarred: boolean = false;
 
-  star() {
-    this.isStarred = true;
-  }
-
-  unstar() {
-    this.isStarred = false;
-  }
-
-  addcart() {
-    this.myService.addToCart(this.token,this.ID).subscribe({
-      next: (res) => {
-        console.log(res);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
-  token = localStorage.getItem('token')
+  token = localStorage.getItem('token');
   ID: any;
   product: any;
   prodData!: any;
@@ -42,6 +24,7 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.ID);
     this.myService.getProductById(this.ID).subscribe({
       next: (res) => {
         this.product = res;
@@ -64,16 +47,50 @@ export class ProductComponent implements OnInit {
         console.log(err);
       },
     });
-
-
-
-    // throw new Error('Method not implemented.');
+  }
+  star() {
+    this.isStarred = true;
   }
 
-  // reviews() {
-  //   return { 'd-none': !this.prodData.reviews };
-  // }
+  unstar() {
+    this.isStarred = false;
+  }
+
+  addcart() {
+    console.log(this.ID);
+    this.myService
+      .addToCart(this.token, {
+        productId: this.ID,
+      })
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+  }
+
+  addwishes() {
+    console.log(this.ID);
+    this.myService
+      .addtowish(this.token, {
+        productId: this.ID,
+      })
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+  }
 }
+// reviews() {
+//   return { 'd-none': !this.prodData.reviews };
+// }
 
 // export class ProdData {
 //   _id: any;

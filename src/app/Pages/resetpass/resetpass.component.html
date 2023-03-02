@@ -1,12 +1,39 @@
+<div class="d-flex justify-content-between">
+  <form class="col-lg-3">
+    <a class="p-1 py-3 logo" routerLink="/home"
+      ><img class="col-2" src="../../../assets/image/logo1.png"
+    /></a>
+    <h3 class="py-2 px-1" style="font-family: 'Fraunces', serif">
+      <h3>Strong Password include number, letters ,and punctuation marks</h3>
+    </h3>
+    <p class="py-2 px-1" style="font-family: 'Fraunces', serif">
+      Enter new password
+    </p>
+    <div class="p-1">
+      <input
+        type="password"
+        class="form-control"
+        placeHolder="password"
+        required
+      />
+    </div>
 
-<div class="reset shadow">
-  <form>
-    <h3>Reset Your Password</h3>
-    <p>Strong Password include number, letters ,and punctuation marks</p>
-    <span>Enter new password</span>
-    <input type="password" required>
-    <span>Confirm new password</span>
-    <input type="password" required>
- <button type="submit" class="btn"><a routerlink="/home"></a>Reset Password</button>
+    <p class="py-2 px-1" style="font-family: 'Fraunces', serif">
+      Confirm new password
+    </p>
+    <div class="p-1">
+      <input
+        type="password"
+        class="form-control"
+        placeHolder="password"
+        required
+      />
+    </div>
+
+    <button class="mt-2 w-100 p-2 border-0 rounded">
+      <a routerLink="/home" class="text-decoration-none">Reset Password</a>
+    </button>
   </form>
+
+  <img src="../../../assets/image/needles.jpg" class="col-6 image" />
 </div>
