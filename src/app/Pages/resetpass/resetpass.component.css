@@ -1,0 +1,27 @@
+.reset{
+margin: auto;
+width: 425px;
+padding: 50px;
+}
+.reset form h3{
+font-size: 20px;
+font-weight: bold;
+}
+.reset form span{
+display: block;
+margin-top: 20px;
+}
+.reset form input{
+display: block;
+width: 100%;
+}
+.reset form button{
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  margin-top: 46px;
+  width: 200px;
+  color: white;
+  font-weight: bold;
+  background-color: #51AFAF;
+}

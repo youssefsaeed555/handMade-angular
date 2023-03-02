@@ -1,0 +1,101 @@
+.imgproduct img {
+  width: 90%;
+  height: 180px;
+  object-fit: fill;
+}
+parent{
+  align-items: start;
+}
+.total {
+  border: 1px solid #00898d;
+  height: 280px;
+  text-align: center;
+}
+.total img {
+  height: 230px;
+  margin: auto;
+  margin-left: 14px;
+}
+.controlQuantity {
+  margin-left: 45px;
+}
+.controlQuantity button {
+  color: white;
+}
+.proccese {
+  display: flex;
+  margin-left: 35px;
+}
+
+.buy,
+.remove {
+  background-color: #00898d;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 7px;
+}
+
+.remove {
+  background-color: #d37c58;
+}
+.increment,
+.decrement {
+  background-color: #119aa2;
+  font-size: 20px;
+  padding: 5px !important;
+  margin: 4px;
+}
+.description {
+  margin-left: 16px;
+  font-size: 16px;
+}
+.subprice {
+  font-size: 20px;
+  margin-top: 15px;
+}
+.pcart {
+  font-size: 30px;
+}
+.quantity{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.info{
+  text-align: left;
+}
+@media only screen and (max-width: 896px) {
+  .imgproduct img {
+    width: 60%;
+    height: 150px;
+
+    object-fit: fill;
+    margin-bottom: 20px;
+  }
+  .controlQuantity {
+    margin-left: 156px;
+  }
+.proccese{
+  margin-left: 139px;
+}
+  .buy,
+  .remove {
+    margin-left: 10px;
+  }
+  .description {
+    margin-bottom: 0;
+  }
+  .subprice {
+    margin: auto;
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  .info{
+    text-align: center;
+  }
+}
+/*-------------------------*/
+

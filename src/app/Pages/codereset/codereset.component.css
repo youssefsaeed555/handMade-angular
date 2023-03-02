@@ -1,0 +1,56 @@
+/* .reset{
+  margin: auto;
+  width: 425px;
+  padding: 50px;
+  }
+  .reset form h3{
+  font-size: 20px;
+  font-weight: bold;
+  }
+  .reset form span{
+  display: block;
+  margin-top: 20px;
+  }
+  .reset form input{
+  display: block;
+  width: 100%;
+  }
+  .reset form button{
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 46px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    background-color: #51AFAF;
+  } */
+
+
+  .logo {
+    margin-left: 40%;
+  }
+  img.image {
+    padding: 10px;
+    height: 100vh;
+    border-radius: 30px;
+  }
+
+  form {
+    margin: auto;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+  button{
+    background-color: #51afaf;
+
+  }
+  button a{
+    color: white;
+    font-size: 23px;
+  }
+
+
+

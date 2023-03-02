@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from 'src/app/Service/service.service';
@@ -17,6 +18,18 @@ export class ProductComponent implements OnInit {
   unstar() {
     this.isStarred = false;
   }
+
+  addcart() {
+    this.myService.addToCart(this.token,this.ID).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+  token = localStorage.getItem('token')
   ID: any;
   product: any;
   prodData!: any;
@@ -51,6 +64,9 @@ export class ProductComponent implements OnInit {
         console.log(err);
       },
     });
+
+
+
     // throw new Error('Method not implemented.');
   }
 
