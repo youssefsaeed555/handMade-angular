@@ -1,17 +1,33 @@
-
-
 <div class="d-flex justify-content-between">
 
-  <form class="col-lg-3">
+  <form class="col-lg-3"[formGroup]="validationForm" (submit)="check()">
     <a class="p-1 py-3 logo"  routerLink="/home"><img class="col-2" src="../../../assets/image/logo1.png"></a>
     <h3 class="py-2 px-1" style="font-family: 'Fraunces', serif;"><h3>Reset Your Password</h3></h3>
     <p class="py-2 px-1" style="font-family: 'Fraunces', serif;">Enter the code sent to your phone</p>
-    <div class="p-1">
-      <input type="text" class="form-control" placeHolder="code" required />
+    <div class="p-1 form-group">
+      <input
+        type="text"
+        class="form-control"
+        [ngClass]="validCodeClass()"
+        placeHolder="code"
+        name="Code"
+        formControlName="code"
+        required
+      />
+      <!-- <p
+        *ngIf="!validCode && validationForm.controls['code'].value"
+        class="text-danger"
+      >
+        *Please, enter your Code
+      </p> -->
     </div>
 
-    <button class=" w-100 p-2 border-0 rounded mt-2"><a  routerLink="/resetpass" class="text-decoration-none">next</a></button>
 
+    <input
+    type="submit"
+    value="Next"
+    class="text-capitalize w-100 p-2 border-0 rounded"
+  />
   </form>
 
   <img src="../../../assets/image/needles.jpg" class="col-6 image" />

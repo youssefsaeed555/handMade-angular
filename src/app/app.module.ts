@@ -23,6 +23,7 @@ import { CoderesetComponent } from './Pages/codereset/codereset.component';
 import { CodeComponent } from './Pages/code/code.component';
 import { ResetpassComponent } from './Pages//resetpass/resetpass.component';
 import { ErrorComponent } from './Components/error/error.component';
+import { CheckoutComponent } from './Pages/checkout/checkout.component';
 
 var Routes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,6 +38,7 @@ var Routes: Routes = [
   {path:'codetoreset',component:CoderesetComponent},
   {path:'code',component:CodeComponent},
   {path:'resetpass',component:ResetpassComponent},
+  {path:'checkout',component:CheckoutComponent},
   { path: '**', component: ErrorComponent },
 ];
 
@@ -59,6 +61,7 @@ var Routes: Routes = [
     CodeComponent,
     ResetpassComponent,
     ErrorComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
