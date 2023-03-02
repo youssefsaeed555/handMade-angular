@@ -1,0 +1,28 @@
+.logo {
+  margin-left: 40%;
+}
+img.image {
+  padding: 10px;
+  height: 100vh;
+  border-radius: 30px;
+}
+
+form {
+  margin: auto;
+}
+
+h3 {
+  font-weight: bold;
+}
+button{
+  background-color: #51afaf;
+  color: white;
+}
+button a{
+  color: white;
+  font-size: 23px;
+}
+
+
+
+

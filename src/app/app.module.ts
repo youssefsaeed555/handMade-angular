@@ -17,6 +17,11 @@ import { ProductsOfCategoryComponent } from './Pages/products-of-category/produc
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNoAnimationModule } from 'ngx-toastr';
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
+import { OrderComponent } from './Pages/order/order.component';
+import { SaveitemComponent } from './Pages/saveitem/saveitem.component';
+import { CoderesetComponent } from './Pages/codereset/codereset.component';
+import { CodeComponent } from './Pages/code/code.component';
+import { ResetpassComponent } from './Pages//resetpass/resetpass.component';
 import { ErrorComponent } from './Components/error/error.component';
 
 var Routes: Routes = [
@@ -27,6 +32,11 @@ var Routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'category/:id/products', component: ProductsOfCategoryComponent },
+  {path:'order',component:OrderComponent},
+  {path:'saveitem',component:SaveitemComponent},
+  {path:'codetoreset',component:CoderesetComponent},
+  {path:'code',component:CodeComponent},
+  {path:'resetpass',component:ResetpassComponent},
   { path: '**', component: ErrorComponent },
 ];
 
@@ -43,6 +53,11 @@ var Routes: Routes = [
     ProductComponent,
     ProfileComponent,
     ProductsOfCategoryComponent,
+    OrderComponent,
+    SaveitemComponent,
+    CoderesetComponent,
+    CodeComponent,
+    ResetpassComponent,
     ErrorComponent,
   ],
   imports: [
