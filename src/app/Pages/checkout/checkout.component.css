@@ -1,0 +1,45 @@
+.pcart {
+  font-size: 30px;
+}
+.address{
+  border: 1px solid gray;
+  border-radius: 14px;
+  padding: 15px;
+}
+.locat{
+  border-left: 1px solid gray;
+  padding-left: 30px;
+  font-size: 17px;
+}
+.locat p a{
+  text-decoration: none;
+}
+.locat p i{
+  color: orange;
+  font-size: 29px;
+}
+.cart a,.delivery a{
+  color: darkblue;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: darkgray;
+    padding: 10px;
+    display: block;
+    width: 56%;
+    border-radius: 10px;
+}
+.cart a:hover,.delivery a:hover{
+  background-color: darkblue;
+  color:darkgray;
+  transition: 0.5s all;
+}
+
+.cart p,.delivery p{
+  font-size: 16px;
+}
+.pay{
+  border-left: 1px solid gray;
+    padding-left: 24px;
+}
+
