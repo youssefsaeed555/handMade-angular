@@ -102,6 +102,15 @@ export class ServiceService {
     headers.append('Authorization',token);
     return this.myClient.get(`${this.baseURL}/api/v1/cart/`, { headers });
   }
+  getaddress(token:any){
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization',token);
+    return this.myClient.get(`${this.baseURL}/api/v1/addresses/`, { headers });
+  }
   getProductWish(token:any) {
     let headers: HttpHeaders = new HttpHeaders();
     headers.append(

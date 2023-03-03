@@ -1,6 +1,49 @@
 <app-navbar></app-navbar>
 <div class="container pt-5">
-  <div class="mt-3 pt-2">
-    <p class="pcart">Checkout <i class="fa-solid fa-cart-shopping"></i></p>
-</div>
+  <div class="mt-4 pt-2">
+    <p class="pcart">Checkout <i class="fa-solid fa-money-check-dollar"></i></p>
+  </div>
+  <div class="row"  *ngIf="address">
+    <div class="col-sm-9 row address"  *ngFor="let p of address.data">
+      <div class="col-lg-4">
+        <p>1-shipping addres</p>
+      </div>
+      <div class="col-sm-8 locat">
+        <p>name : mohamed Naiem{{p.country}}</p>
+        <p>address : 4ش البستان قسم الجامع الزقازيق الشرقية</p>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Or pick up near this address
+          - <a href="#"> See nearby pick-up locations</a>
+        </p>
+      </div>
+
+  </div>
+    <div class="col-sm-9 mt-4 row address">
+      <div class="col-lg-4">
+        <p>2- Choose a payment method</p>
+      </div>
+      <div class="col-sm-8 pay">
+
+        <div class="cart">
+          <a routerLink="/">
+            <i class="fa-brands fa-cc-visa"></i> your credit and debit card
+          </a>
+          <p>
+            Enjoy getting an additional 10% discount when using
+            electronic payment (Mada, Visa, MasterCard, Apple Pay and bank
+            transfer, STC Pay)
+          </p>
+        </div>
+
+        <div class="delivery">
+          <a routerLink="/">
+
+              <i class="fa-solid fa-truck-ramp-box"></i> Cash on Delivery (COD)
+
+          </a>
+          <p>Pay by cash on delivery. non-refundable COD fees of  EGP 12 may apply</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
