@@ -11,7 +11,8 @@
     <ul class="list-group-flush row ml-5 mx-4 cols-7 products">
       <li
         class="product_card list-group-item col-lg rounded"
-        *ngFor="let p of prodsDetails"
+        *ngFor="let p of prodsDetails | filter : searchKey : 'title'
+        | paginate : { itemsPerPage: itemsPerPage, currentPage: p }"
       >
         <!-- <ng-container *ngTemplateOutlet="p.category = ">
 
@@ -191,5 +192,8 @@
       </div>
     </li> -->
     </ul>
+    <div class="container py-5 justify-content-center">
+      <pagination-controls class="my-pagination " (pageChange)="p = $event"></pagination-controls>
+    </div>
   </div>
 </div>

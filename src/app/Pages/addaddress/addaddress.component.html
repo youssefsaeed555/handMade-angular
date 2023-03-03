@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<pre>
+
+
+</pre>
+<div class="container bg bg-light my-5 list-group-flush rounded">
+    <div class="mx-auto  text-center mx-5 my-5">
+        <h1 style="font-family: 'Fraunces', serif; color: #119AA2;">Add New Address</h1>
+<br>
+        <form [formGroup]="validationForm">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" formControlName="name">
+                <label for="floatingInputGrid">Full Name</label>
+                <p
+                *ngIf="!validName && validationForm.controls['name'].value"
+                class="text-danger">
+                Name must be at least 3 characters!
+              </p>
+              </div>
+              <br>
+              <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" formControlName="country">
+                  <label for="floatingInputGrid">Country</label>
+              </div>
+<br>
+              <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" formControlName="city">
+                  <label for="floatingInputGrid">City</label>
+              </div>
+            <br>
+              <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid" formControlName="governorate">
+                  <label for="floatingInputGrid">Government</label>
+              </div>
+
+            <br>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" formControlName="street">
+                <label for="floatingInputGrid">Street Name</label>
+            </div>
+
+            <br>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" formControlName="build_no">
+                <label for="floatingInputGrid">Build Number</label>
+            </div>
+            <pre>
+
+            </pre>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" formControlName="alias">
+                <label class="form-check-label" for="inlineRadio1">Home</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" formControlName="alias">
+                <label class="form-check-label" for="inlineRadio2">Work</label>
+              </div>
+            <div class=" ">
+                <input type="button" value="Add Address" (click)="Add()" class="btn btn-outline-info btn-lg m-4"  routerLink="/address">
+            </div>
+            </form>
+    </div>
+      
+</div>
+<br>

@@ -13,9 +13,16 @@ export class ProductsOfCategoryComponent implements OnInit {
   products: any;
   prodsDetails: any;
   isStarred: boolean = false;
-
+  searchKey: string = '';
   currentCategory: any;
-
+  itemsPerPage: number = 5;
+  totalProducts: any;
+  p: number = 1;
+  stars = [1, 2, 3, 4, 5];
+  rating = 0;
+  updateRating(r: any) {
+    this.rating = r;
+  }
   star() {
     this.isStarred = true;
   }
@@ -42,7 +49,9 @@ export class ProductsOfCategoryComponent implements OnInit {
         console.log(err);
       },
     });
-
+    this.myService.search.subscribe((val) => {
+      this.searchKey = val;
+    });
     // this.myService.getAllCategories().subscribe({
     //   next: (res) => {
     //     this.categories = res;
