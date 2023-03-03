@@ -54,7 +54,20 @@ i {
   margin-bottom: 3rem;
   margin-right: 0.25rem;
 }
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #00898d;
+  text-align: center;
+  border-radius: 5px;
+  color: whitesmoke;
+  padding: 1%;
+}
 
+.my-pagination ::ng-deep .ngx-pagination  {
+  text-align: center;
+  border-radius: 10px;
+  padding: 1%;
+  margin: auto;
+}
 @media only screen and (max-width: 1400px) {
   div.container {
     margin: 0px 2rem;

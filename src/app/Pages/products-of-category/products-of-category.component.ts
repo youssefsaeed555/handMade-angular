@@ -15,7 +15,7 @@ export class ProductsOfCategoryComponent implements OnInit {
   isStarred: boolean = false;
   searchKey: string = '';
   currentCategory: any;
-  itemsPerPage: number = 5;
+  itemsPerPage: number = 4;
   totalProducts: any;
   p: number = 1;
   stars = [1, 2, 3, 4, 5];
