@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+<pre></pre>
+<div class="container bg bg-light my-5 list-group-flush rounded">
+  <div class="mx-auto text-center mx-5 my-5">
+    <h1 style="font-family: 'Fraunces', serif; color: #119aa2">
+      Update Address
+    </h1>
+    <br />
+    <form>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="name"
+          value="{{ name }}"
+          [(ngModel)]="name"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">Full Name</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="country"
+          value="{{ country }}"
+          [(ngModel)]="country"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">Country</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="city"
+          value="{{ city }}"
+          [(ngModel)]="city"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">City</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="government"
+          value="{{ governorate }}"
+          [(ngModel)]="governorate"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">Government</label>
+      </div>
+
+      <br />
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="street"
+          value="{{ street }}"
+          [(ngModel)]="street"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">Street Name</label>
+      </div>
+
+      <br />
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInputGrid"
+          name="build_no"
+          value="{{ build_no }}"
+          [(ngModel)]="build_no"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label for="floatingInputGrid">Build Number</label>
+      </div>
+      <div class=" ">
+        <!-- <input
+          type="button"
+          value="Update"
+          (click)="update()"
+          class="btn btn-outline-info btn-lg m-4"
+          routerLink="/address"
+        /> -->
+      </div>
+    </form>
+  </div>
+</div>
+<br />

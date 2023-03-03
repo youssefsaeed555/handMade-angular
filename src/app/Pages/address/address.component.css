@@ -1,0 +1,9 @@
+input[type="button"]:hover {
+    background-color: #119aa2;
+    color: white;
+  }
+  .btn {
+    background-color: white;
+    border: 1px solid #119aa2;
+    color: #119aa2;
+  }

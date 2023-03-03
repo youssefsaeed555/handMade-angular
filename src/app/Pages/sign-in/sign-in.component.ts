@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ServiceService } from 'src/app/Service/service.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in',
@@ -16,7 +17,8 @@ export class SignInComponent {
     public myService: ServiceService,
     myActiveRoute: ActivatedRoute,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private location: Location
   ) {}
 
   user: any;
@@ -75,12 +77,19 @@ export class SignInComponent {
           this.token = this.currentUser.token;
           this.userId = this.currentUser.userId;
           console.log(this.token, this.userId);
+
           localStorage.setItem('token', this.token);
-          this.showSuccess();
-          this.router.navigate(['/home']);
+          if (this.currentUser.role === 'user') {
+            this.router.navigate(['/home']);
+            this.location.replaceState('/home');
+            this.showSuccess();
+          } else {
+            this.showError('Please Enter correct E-mail & Password');
+            console.log('err');
+          }
         },
         error: (err) => {
-          this.showError();
+          this.showError(err);
           console.log(err);
         },
       });
@@ -100,8 +109,8 @@ export class SignInComponent {
     });
   }
 
-  showError() {
-    this.toastr.error('Login Failed', '', {
+  showError(text: string) {
+    this.toastr.error(text, '', {
       titleClass: 'center',
       messageClass: 'center',
       // easing: 'ease-in',

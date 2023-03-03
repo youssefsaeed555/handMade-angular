@@ -1,0 +1,99 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="container bg bg-light my-5 py-5 list-group-flush rounded">
+    <div class="mx-auto text-center mx-5 my-5">
+      <div>
+        <h2 style="font-family: 'Fraunces', serif; color: #119aa2">
+          Your Addresses
+        </h2>
+      </div>
+
+      <div style="font-family: 'Fraunces', serif; font-size: large">
+        Add your shipping addresses here for a fast purchase experience!
+        <br />You will be able to add, modify or delete them at any time.
+      </div>
+      <div class="d-flex justify-content-center m-2">
+        <input
+          type="button"
+          value="Add Address"
+          class="btn btn-outline-info btn-lg m-4"
+          routerLink="/address/addaddress"
+        />
+      </div>
+    </div>
+  </div>
+  <pre></pre>
+  <!-- <div class="row my-5">
+    <div class="card" style="width: 18rem;" *ngIf="address">
+      <div *ngFor="let s of address.data">
+      <p class="card-text">
+        <a routerLink="/address/{{ s.id }}" class="text-decoration-none"></a>
+      </p>
+      <div class="card-body">
+        <h5 class="card-title">Name:{{ s.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Country: {{ s.country }}</h6>
+        <p class="card-text">City:{{ s.city }}</p>
+        <p class="card-text">Government: {{ s.governorate }}</p>
+        <p class="card-text">Street: {{ s.street }}</p>
+        <p class="card-text">Build Number:{{ s.build_no }}</p>
+        <p>
+          <input
+            type="button"
+            (click)="deleteAddress(s._id)"
+            value="Delete"
+            class="btn btn-outline-danger btn-sm m-2"
+          />
+        </p> -->
+  <!-- <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a> -->
+  <!-- </div>
+    </div>
+    </div> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div
+          class="card text-dark bg-white mb-2"
+          style="max-width: 18rem; border: #119aa2 dashed 1px"
+          *ngIf="address"
+        >
+          <div *ngFor="let s of address.data">
+            <p class="card-text">
+              <a
+                routerLink="/address/{{ s.id }}"
+                class="text-decoration-none"
+              ></a>
+            </p>
+            <div class="card-body">
+              <p class="card-text">Country: {{ s.country }}</p>
+              <div class="card-text">{{ s.name }}</div>
+              <p class="card-text">City: {{ s.city }}</p>
+              <p class="card-text">Government: {{ s.governorate }}</p>
+              <p class="card-text">Street: {{ s.street }}</p>
+              <p class="card-text">Build Number: {{ s.build_no }}</p>
+              <p class="card-text">{{ s.alias }}</p>
+
+              <!-- <input
+          type="button"
+          value="Update"
+          class="btn btn-outline-info btn-sm m-2"
+          routerLink="/address/updateAddress/{{ s.id }}"
+        />
+         -->
+              <p>
+                <input
+                  type="button"
+                  (click)="deleteAddress(s._id)"
+                  value="Delete"
+                  class="btn btn-outline-danger btn-sm m-2"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div>
+  </div> -->
+</div>

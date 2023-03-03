@@ -24,6 +24,11 @@ import { CodeComponent } from './Pages/code/code.component';
 import { ResetpassComponent } from './Pages//resetpass/resetpass.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { CheckoutComponent } from './Pages/checkout/checkout.component';
+import { AddressComponent } from './Pages/address/address.component';
+import { AddaddressComponent } from './Pages/addaddress/addaddress.component';
+import { UpdateaddressComponent } from './Pages/updateaddress/updateaddress.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 var Routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,12 +38,15 @@ var Routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'category/:id/products', component: ProductsOfCategoryComponent },
-  {path:'order',component:OrderComponent},
-  {path:'saveitem',component:SaveitemComponent},
-  {path:'codetoreset',component:CoderesetComponent},
-  {path:'code',component:CodeComponent},
-  {path:'resetpass',component:ResetpassComponent},
-  {path:'checkout',component:CheckoutComponent},
+  { path: 'order', component: OrderComponent },
+  { path: 'saveitem', component: SaveitemComponent },
+  { path: 'codetoreset', component: CoderesetComponent },
+  { path: 'code', component: CodeComponent },
+  { path: 'resetpass', component: ResetpassComponent },
+  { path: 'address', component: AddressComponent },
+  { path: 'address/addaddress', component: AddaddressComponent },
+  { path: 'address/updateAddress/:id', component: UpdateaddressComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path: '**', component: ErrorComponent },
 ];
 
@@ -62,6 +70,10 @@ var Routes: Routes = [
     ResetpassComponent,
     ErrorComponent,
     CheckoutComponent,
+    AddressComponent,
+    AddaddressComponent,
+    UpdateaddressComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +82,7 @@ var Routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
     ToastNoAnimationModule.forRoot({
       // positionClass: 'toast-bottom-right',
       positionClass: 'toast-top-right',

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Token } from '@angular/compiler';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class ServiceService {
   constructor(private myClient: HttpClient) { }
 
   private baseURL = 'https://handmadeiti-api.onrender.com';
-
+public search = new BehaviorSubject<string>('');
   getAllCategories() {
     return this.myClient.get(`${this.baseURL}/api/v1/categories`);
   }
@@ -158,5 +159,51 @@ export class ServiceService {
     );
     headers.append('Authorization', token);
     return this.myClient.delete(`${this.baseURL}/api/v1/cart/${id}`);
+  }
+   getAddress(token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.get(`${this.baseURL}/api/v1/addresses/`);
+  }
+  getAddressById(id: any, token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.get(`${this.baseURL}/api/v1/addresses/${id}`);
+  }
+  addNewAddress(newAddress: any, token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.post(`${this.baseURL}/api/v1/addresses/`, newAddress);
+  }
+
+  // updateAddress(id: any, newAddress: any) {
+  //   let headers: HttpHeaders = new HttpHeaders();
+  //   headers.append(
+  //     'Content-Type',
+  //     'application/x-www-form-urlencoded; charset=UTF-8'
+  //   );
+  //   headers.append('Authorization', token);
+  //   return this.myClient.put(`${this.baseURL}/api/v1/addresses/${id}`, newAddress);
+  // }
+  deleteAddress(id: any, token: any) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
+    headers.append('Authorization', token);
+    return this.myClient.delete(`${this.baseURL}/api/v1/addresses/${id}`);
   }
 }

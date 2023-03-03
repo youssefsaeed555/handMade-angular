@@ -5,8 +5,6 @@
       <img class="navbar-brand" src="../../assets/image/logo.png" />
     </a>
 
-
-
     <form class="nav-item d-flex fsearch order-0 col-lg-3 col-5" role="search">
       <div class="div1 w-100">
         <input
@@ -14,12 +12,13 @@
           type="search"
           placeholder="Search for products"
           aria-label="Search"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
         />
         <a href="#">
           <i class="fa-solid fa-magnifying-glass iconSearch"></i>
         </a>
       </div>
-
     </form>
 
     <button
@@ -51,8 +50,12 @@
             <li>
               <a class="dropdown-item" routerLink="/profile">My Profile</a>
             </li>
+            <a class="dropdown-item" routerLink="/address">My Addresses</a>
+
             <li><a class="dropdown-item" routerLink="/checkout">Orders</a></li>
-            <li><a class="dropdown-item" routerLink="/saveitem">Wishlist</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/saveitem">Wishlist</a>
+            </li>
             <li><a class="dropdown-item" (click)="logout()">Log out</a></li>
           </ul>
         </li>
@@ -68,9 +71,12 @@
           </li></ng-template
         >
 
-
         <li>
-          <a class="nav-link cart text-white" aria-current="page" routerLink="/order">
+          <a
+            class="nav-link cart text-white"
+            aria-current="page"
+            routerLink="/order"
+          >
             <i class="fa-solid fa-cart-shopping text-white"></i> Cart</a
           >
         </li>
@@ -78,4 +84,3 @@
     </div>
   </div>
 </nav>
-
