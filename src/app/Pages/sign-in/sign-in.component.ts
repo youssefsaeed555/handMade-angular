@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ServiceService } from 'src/app/Service/service.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in',
@@ -16,7 +17,8 @@ export class SignInComponent {
     public myService: ServiceService,
     myActiveRoute: ActivatedRoute,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private location: Location
   ) {}
 
   user: any;
@@ -78,6 +80,7 @@ export class SignInComponent {
           localStorage.setItem('token', this.token);
           this.showSuccess();
           this.router.navigate(['/home']);
+          this.location.replaceState('/home');
         },
         error: (err) => {
           this.showError();

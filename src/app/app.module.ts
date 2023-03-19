@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastNoAnimationModule } from 'ngx-toastr';
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
 import { ErrorComponent } from './Components/error/error.component';
+import { CommonModule } from '@angular/common';
 
 var Routes: Routes = [
   { path: '', component: HomeComponent },
@@ -63,6 +64,7 @@ var Routes: Routes = [
         warning: 'toast-warning',
       },
     }),
+    CommonModule,
   ],
   providers: [
     {
